@@ -36,8 +36,6 @@ test:
         - nvm use ${VERSION_NODE_17}
         - npm ci
         - npm run build
-        - #npx pm2 start npm -- start
-        - #npm run start
     test:
       commands:
         - nvm use ${VERSION_NODE_17}

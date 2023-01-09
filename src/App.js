@@ -10,7 +10,7 @@ function App() {
         <li> <Link to="/a" data-test="a-link">Navigate to A</Link></li>
         <li><Link to="/b" data-test="b-link">Navigate to B</Link></li>
       </ul>
-      <div>
+      <div data-test="content">
         <Routes>
           <Route path="/a" element={<AComp />} />
           <Route path="/b" element={<BComp />} />

@@ -35,19 +35,13 @@ test:
       commands:
         - nvm use ${VERSION_NODE_17}
         - npm ci
-        - npm install wait-on
-        - npm install pm2
-        - npm install mocha mochawesome mochawesome-merge mochawesome-report-generator
-        - #npm run test:provisionCognitoUsers
         - npm run build
         - #npx pm2 start npm -- start
         - #npm run start
-        - #'npx wait-on --timeout 60 http://localhost:3000'
     test:
       commands:
         - nvm use ${VERSION_NODE_17}
-        - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
-        #- 'npx cypress run --baseUrl "https://${AWS_BRANCH}.${AWS_APP_ID}.amplifyapp.com" --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
+        - 'npx cypress run --baseUrl "https://${AWS_BRANCH}.${AWS_APP_ID}.amplifyapp.com" --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
     postTest:
       commands:
         - nvm use ${VERSION_NODE_17}

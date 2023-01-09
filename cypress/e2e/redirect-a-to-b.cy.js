@@ -3,7 +3,7 @@
 describe("301 redirects", () => {
   it("should redirect /a to /b", () => {
     cy.visit("/a");
-    cy.url().should("match", /b\/$/);
+    cy.url().should("match", /b$/);
     //cy.getBySel("content").should("have.text", "This is the B route");
   });
   it("/a should return status code 301", () => {

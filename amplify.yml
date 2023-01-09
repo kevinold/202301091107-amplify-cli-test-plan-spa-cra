@@ -39,6 +39,7 @@ test:
     test:
       commands:
         - nvm use ${VERSION_NODE_17}
+        - 'npm run build:aws-exports-mjs'
         - 'npx cypress run --config baseUrl="https://${AWS_BRANCH}.${AWS_APP_ID}.amplifyapp.com" --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
     postTest:
       commands:

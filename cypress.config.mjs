@@ -14,8 +14,7 @@ export default defineConfig({
   },
 
   e2e: {
-    baseUrl: "http://localhost:3000",
-    experimentalSessionAndOrigin: true,
+    baseUrl: "https://main.d2suven3crjiz3.amplifyapp.com",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },

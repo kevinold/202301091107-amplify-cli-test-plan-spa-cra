@@ -6,12 +6,16 @@ import BComp from "./BComp";
 function App() {
   return (
     <div>
-      <Link to="/a" data-test="a-link">Navigate to A</Link>
-      <Link to="/b" data-test="b-link">Navigate to B</Link>
-      <Routes>
-        <Route path="/a" element={<AComp />} />
-        <Route path="/b" element={<BComp />} />
-      </Routes>
+      <ul>
+        <li> <Link to="/a" data-test="a-link">Navigate to A</Link></li>
+        <li><Link to="/b" data-test="b-link">Navigate to B</Link></li>
+      </ul>
+      <div>
+        <Routes>
+          <Route path="/a" element={<AComp />} />
+          <Route path="/b" element={<BComp />} />
+        </Routes>
+      </div>
     </div>
   );
 }

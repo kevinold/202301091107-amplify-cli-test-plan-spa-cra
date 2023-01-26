@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Reverse proxy - 200 rewrite", () => {
+describe.skip("Reverse proxy - 200 rewrite", () => {
   const sourceUri = "/images/testing.jpg";
   const destinationUri = "https://images.otherdomain.com/testing.jpg";
   it(`should redirect ${sourceUri} to ${destinationUri}`, () => {

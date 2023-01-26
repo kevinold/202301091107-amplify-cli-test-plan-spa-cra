@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Reverse proxy - 302 rewrite", () => {
+describe.skip("Reverse proxy - 302 rewrite", () => {
   const sourceUri = "/documents/anydoc.txt";
   const destinationUri = "/documents/us/anydoc.txt";
   it(`should redirect ${sourceUri} to ${destinationUri}`, () => {

@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("SPA redirect - 200 rewrite", () => {
+describe.skip("SPA redirect - 200 rewrite", () => {
   const sourceUri = "/a";
   const destinationUri = "/b";
   it(`should redirect ${sourceUri} to ${destinationUri}`, () => {

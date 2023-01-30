@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
 describe("Basic redirect - 301", () => {
-  const sourceUri = "/a";
-  const destinationUri = "/b";
+  const sourceUri = "/original.html";
+  const destinationUri = "/destination.html";
   it(`should redirect ${sourceUri} to ${destinationUri}`, () => {
     cy.visit(sourceUri);
-    cy.url().should("match", /b$/);
+    cy.url().should("equal", destinationUri);
     cy.getBySel("content").should("have.text", "This is the B route");
   });
   it(`${sourceUri} should return status code 301`, () => {

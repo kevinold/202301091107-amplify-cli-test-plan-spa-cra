@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
 describe.skip("Reverse proxy - 200 rewrite", () => {
-  const sourceUri = "/images/testing.jpg";
-  const destinationUri = "https://images.otherdomain.com/testing.jpg";
+  const sourceUri = "/images/150.jpg";
+  const destinationUri = "https://via.placeholder.com/150.jpg";
   it(`should redirect ${sourceUri} to ${destinationUri}`, () => {
     cy.visit(sourceUri);
     cy.url().should("equal", destinationUri);
